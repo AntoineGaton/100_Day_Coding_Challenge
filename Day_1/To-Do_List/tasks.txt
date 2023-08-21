@@ -1,6 +1,4 @@
 ============================================
 To-Do List Application
 ============================================
-Total Tasks: 2
-[ ] Hello
-[ ] World
+Total Tasks: 0
