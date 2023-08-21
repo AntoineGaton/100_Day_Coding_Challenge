@@ -21,7 +21,12 @@ The 100 Days of Coding challenge involves coding and learning for at least an ho
 
 ## Follow Along
 
-You're welcome to follow along with my 100 Days of Coding journey! Feel free to explore the daily folders to see my progress, challenges, and achievements. If you have any suggestions, feedback, or want to connect, don't hesitate to reach out.
+You're welcome to follow along with my 100 Days of Coding journey! Feel free to explore the daily folders to see my progress, challenges, and achievements. If you have any suggestions, or feedback, or want to connect, don't hesitate to reach out.
+
+## Log
+- **Day_0:** Did research and began planning for my journey ahead. My journey is being recorded on my Linkedin page.
+- **Day_1:** Started the To-Do List app. Excited for how big I can make this app. Starting small and enjoying the ride. Gonna code at least an hour a day and make it a stressless experience.
+- **Day_2:** Came across a weird bug with the "mark completed" functionality, but I will tackle it tomorrow. Learned more about the OS library in Python and the ANSI escape codes. Also started implementing the try/exception into my code for good practice and habit.
 
 ## Contact
 
