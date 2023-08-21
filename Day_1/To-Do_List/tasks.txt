@@ -1,4 +1,5 @@
 ============================================
 To-Do List Application
 ============================================
-Total Tasks: 0
+Total Tasks: 1
+[ ] Code for Day 2
