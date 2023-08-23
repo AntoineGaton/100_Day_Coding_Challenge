@@ -27,6 +27,7 @@ You're welcome to follow along with my 100 Days of Coding journey! Feel free to 
 - **Day_0:** Did research and began planning for my journey ahead. My journey is being recorded on my Linkedin page.
 - **Day_1:** Started the To-Do List app. Excited for how big I can make this app. Starting small and enjoying the ride. Gonna code at least an hour a day and make it a stressless experience.
 - **Day_2:** Came across a weird bug with the "mark completed" functionality, but I will tackle it tomorrow. Learned more about the OS library in Python and the ANSI escape codes. Also started implementing the try/exception into my code for good practice and habit.
+- **Day_3 & 4:** Put a pause on the To-Do List app for a short while. Turned my energy to learning tKinter so I can implement a GUI to the application in the future. Might start back up on the weekend once I feel comfortable with Tkinter.
 
 ## Contact
 
