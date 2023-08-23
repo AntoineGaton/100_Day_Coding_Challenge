@@ -1,3 +1,18 @@
+"""
+Things To Do:
+- Fix bug with calculations.
+- Refactor Design.
+- Refactor Code.
+- Add a decimal button.
+- Add a delete button.
+- Add a backspace button.
+- Add a square root button.
+- Add a power button.
+- Add a percentage button.
+- Add a negative/positive button.
+- Add pi button.
+"""
+
 from tkinter import *
 
 root = Tk()
@@ -10,11 +25,7 @@ root.resizable(False, False)
 # Creating an input field
 e = Entry(root, width=50, borderwidth=5, font=("Arial", 10))
 # Placing the input field on the screen
-e.grid(row=0, column=0, columnspan=5, padx=10, pady=10)
-
-# Locking the size of the window
-def lock_size(event):
-    root.geometry("400x300")  # Lock the window size
+e.grid(row=0, column=0, columnspan=5, padx=30, pady=30)
 
 def button_click(number):
     # Gets the current input field value
@@ -23,30 +34,76 @@ def button_click(number):
     e.delete(0, END)
     # Gets the current input field value
     e.insert(0, str(current_num) + str(number))
-    return
 
 def button_clear():
     # Deletes everything in the input field
     e.delete(0, END)
-    return
 
 def button_add():
     # Gets the current input field value
     f_num = e.get()
 
     # global ---> If you want to use the variable outside the function
+    global math
+    math = "addition"
     global first_number
     first_number = int(f_num)
 
     # Deletes everything in the input field
     e.delete(0, END)
-    return
+
+def button_subtract():
+    # Gets the current input field value
+    f_num = e.get()
+
+    # global ---> If you want to use the variable outside the function
+    global math
+    math = "subtraction"
+    global first_number
+    first_number = int(f_num)
+
+    # Deletes everything in the input field
+    e.delete(0, END)
+
+def button_multiply():
+    # Gets the current input field value
+    f_num = e.get()
+
+    # global ---> If you want to use the variable outside the function
+    global math
+    math = "multiplication"
+    global first_number
+    first_number = int(f_num)
+
+    # Deletes everything in the input field
+    e.delete(0, END)
+    
+def button_divide():
+    # Gets the current input field value
+    f_num = e.get()
+
+    # global ---> If you want to use the variable outside the function
+    global math
+    math = "division"
+    global first_number
+    first_number = int(f_num)
+
+    # Deletes everything in the input field
+    e.delete(0, END)
 
 def button_equal():
     s_num = e.get()
     e.delete(0, END)
-    e.insert(0, first_number + int(s_num))
-    return
+    
+    match math:
+        case "addition":
+            e.insert(0, first_number + int(s_num))
+        case "subtraction":
+            e.insert(0, first_number - int(s_num))
+        case "multiplication":
+            e.insert(0, first_number * int(s_num))
+        case "division":
+            e.insert(0, first_number / int(s_num))
 
 # Creating the buttons
 button0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
@@ -60,9 +117,9 @@ button7 = Button(root, text="7", padx=40, pady=20, command=lambda: button_click(
 button8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click(8))
 button9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
 buttonPlus = Button(root, text="+", padx=40, pady=20, command=button_add)
-buttonMinus = Button(root, text="-", padx=40, pady=20, command=lambda: button_click(0))
-buttonMultiply = Button(root, text="+", padx=40, pady=20, command=lambda: button_click(0))
-buttonDivide = Button(root, text="/", padx=40, pady=20, command=lambda: button_click(0))
+buttonMinus = Button(root, text="-", padx=40, pady=20, command=button_subtract)
+buttonMultiply = Button(root, text="+", padx=40, pady=20, command=button_multiply)
+buttonDivide = Button(root, text="/", padx=40, pady=20, command=button_divide)
 buttonEqual = Button(root, text="=", padx=40, pady=20, command=button_equal)
 buttonClear = Button(root, text="C", padx=40, pady=20, command=button_clear)
 
