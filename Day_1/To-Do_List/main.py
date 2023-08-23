@@ -3,6 +3,7 @@ Things To Do Tomorrow:
 - Fix mark completed bug where box is marked but the heading dissapears.
 - Fix user interface.
 - Center heading and add color.
+- USING TKINTER FOR GUI
 
 Things To Do In The Future:
 - Mark tasks as completed: Indicate tasks as completed to track your progress.
@@ -67,21 +68,22 @@ def save_tasks_to_file(tasks, total_tasks):
             file.write(task + "\n")
 
 def main():
-    print("============================================")
-    print("To-Do List Application")
-    print("============================================")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("=================================================")
+    print("|"+BLUE+"\t\tTo-Do List Application\t\t"+RESET+"|")
+    print("=================================================")
 
     list_of_tasks = load_tasks_from_file()
     total_tasks = len(list_of_tasks)
 
     try:
         while True:
-            print("1. View Tasks")
-            print("2. Add Task")
-            print("3. Mark Task As Completed")
-            print("4. Delete Task")
-            print("5. Exit")
-            print("============================================")
+            print("|\t1. View Tasks")
+            print("|\t2. Add Task")
+            print("|\t3. Mark Task As Completed")
+            print("|\t4. Delete Task")
+            print("|\t5. Exit")
+            print("=================================================")
 
             choice = input("Select an option: ")
 
