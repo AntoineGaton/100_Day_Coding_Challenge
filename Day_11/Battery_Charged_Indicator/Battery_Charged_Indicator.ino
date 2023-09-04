@@ -95,8 +95,6 @@ void loop() {
       RGB(255, 0, 255); // Pink
       delay(500);
       RGB(0, 255, 255); // Cyan
-      delay(500);
-      exit(0);
     }
   }
   else {
