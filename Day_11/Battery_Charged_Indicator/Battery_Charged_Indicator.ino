@@ -46,24 +46,29 @@ double getBatteryPercentage() {
 void ShowBatteryPercentage() {
   // Calculate the charge percentage with a custom function
   percentFull = getBatteryPercentage();
- 
-  // Print the elapsed time
-  Serial.print((ticks/1000));
-  Serial.print(" seconds  --->  charge at ");
-  // Print the percent charge
-  Serial.print(percentFull);
-  // Print a percent character and line return
-  Serial.println("%");
- 
-  // Set the LED color based on charge percentage
-  if (percentFull >= 0 && percentFull <= 25) {
-    RGB(125, 0, 0); // Red
+
+  if(ticks % 1000 == 0) {
+    // Print the elapsed time
+    Serial.print((ticks/1000));
+    Serial.print(" seconds  --->  charge at ");
+    // Print the percent charge
+    Serial.print(percentFull);
+    // Print a percent character and line return
+    Serial.println("%");
+  
+    // Set the LED color based on charge percentage
+    if (percentFull >= 0 && percentFull <= 25) {
+      RGB(125, 0, 0); // Red
+    }
+    else if (percentFull > 25 && percentFull <= 75) {
+      RGB(255, 140, 0); // Orange
+    }
+    else if (percentFull > 75 && percentFull < 100) {
+      RGB(0, 128, 0); // Green
+    }
   }
-  else if (percentFull > 25 && percentFull <= 75){
-    RGB(255, 140, 0); // Orange
-  }
-  else if (percentFull > 75 && percentFull < 100) {
-    RGB(0, 128, 0); // Green
+  else {
+    return;
   }
 }
 
@@ -74,10 +79,9 @@ void loop() {
   ticks += wait;
  
   if(batteryLevel >= batteryCapacity) {
-    while(true)
-    {
+    while(true){
       // Battery fully charged
-      Serial.print((ticks/100));
+      Serial.print((ticks/1000));
       Serial.print(" seconds  --->  ");
       Serial.println("FULLY CHARGED");
       batteryLevel = batteryCapacity; // Prevent integer overflow
@@ -92,6 +96,7 @@ void loop() {
       delay(500);
       RGB(0, 255, 255); // Cyan
       delay(500);
+      exit(0);
     }
   }
   else {
