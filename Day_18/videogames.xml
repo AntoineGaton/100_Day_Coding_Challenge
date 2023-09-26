@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videogames>
+   <game>
+      <title>The Legend of Zelda: Breath of the Wild</title>
+      <platform>Nintendo Switch</platform>
+      <release_year>2017</release_year>
+      <developer>Nintendo</developer>
+      <rating>10/10</rating>
+   </game>
+   <game>
+      <title>Red Dead Redemption 2</title>
+      <platform>PlayStation 4, Xbox One</platform>
+      <release_year>2018</release_year>
+      <developer>Rockstar Games</developer>
+      <rating>9.5/10</rating>
+   </game>
+   <game>
+      <title>The Witcher 3: Wild Hunt</title>
+      <platform>PlayStation 4, Xbox One, PC</platform>
+      <release_year>2015</release_year>
+      <developer>CD Projekt</developer>
+      <rating>9.8/10</rating>
+   </game>
+   <game>
+      <title>Super Mario Odyssey</title>
+      <platform>Nintendo Switch</platform>
+      <release_year>2017</release_year>
+      <developer>Nintendo</developer>
+      <rating>9.7/10</rating>
+   </game>
+   <game>
+      <title>God of War</title>
+      <platform>PlayStation 4</platform>
+      <release_year>2018</release_year>
+      <developer>Sony Santa Monica</developer>
+      <rating>9.6/10</rating>
+   </game>
+   <game>
+      <title>Minecraft</title>
+      <platform>Multiple Platforms</platform>
+      <release_year>2011</release_year>
+      <developer>Mojang</developer>
+      <rating>9.0/10</rating>
+   </game>
+   <game>
+      <title>Overwatch</title>
+      <platform>PlayStation 4, Xbox One, PC</platform>
+      <release_year>2016</release_year>
+      <developer>Blizzard Entertainment</developer>
+      <rating>9.2/10</rating>
+   </game>
+   <game>
+      <title>Grand Theft Auto V</title>
+      <platform>Multiple Platforms</platform>
+      <release_year>2013</release_year>
+      <developer>Rockstar North</developer>
+      <rating>9.4/10</rating>
+   </game>
+   <game>
+      <title>Fallout 4</title>
+      <platform>PlayStation 4, Xbox One, PC</platform>
+      <release_year>2015</release_year>
+      <developer>Bethesda Game Studios</developer>
+      <rating>9.1/10</rating>
+   </game>
+   <game>
+      <title>Dark Souls III</title>
+      <platform>PlayStation 4, Xbox One, PC</platform>
+      <release_year>2016</release_year>
+      <developer>FromSoftware</developer>
+      <rating>9.3/10</rating>
+   </game>
+</videogames>
