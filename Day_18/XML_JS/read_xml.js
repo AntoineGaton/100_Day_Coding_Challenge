@@ -6,23 +6,32 @@ fetch("../videogames.xml")
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(data, 'application/xml');
 
-    // Access elements and attributes
-    const games = xmlDoc.getElementsByTagName('game');
-    for (let i = 0; i < games.length; i++) {
-      const title = games[i].getElementsByTagName('title')[0].textContent;
-      const platform = games[i].getElementsByTagName('platform')[0].textContent;
-      const releaseYear = games[i].getElementsByTagName('release_year')[0].textContent;
-      const developer = games[i].getElementsByTagName('developer')[0].textContent;
-      const rating = games[i].getElementsByTagName('rating')[0].textContent;
+    const tbody = document.querySelector('tbody');
 
-      console.log(`Title: ${title}`);
-      console.log(`Platform: ${platform}`);
-      console.log(`Release Year: ${releaseYear}`);
-      console.log(`Developer: ${developer}`);
-      console.log(`Rating: ${rating}`);
-      console.log('');
-    }
-  })
+   // Clear existing table content
+   tbody.innerHTML = '';
+
+   // Loop through each 'game' element and create a table row
+   xmlDoc.querySelectorAll('game').forEach(game => {
+      const row = document.createElement('tr');
+      const title = game.querySelector('title').textContent;
+      const platform = game.querySelector('platform').textContent;
+      const releaseYear = game.querySelector('release_year').textContent;
+      const developer = game.querySelector('developer').textContent;
+      const rating = game.querySelector('rating').textContent;
+
+      // Create table cells and populate with data
+      row.innerHTML = `
+         <td>${title}</td>
+         <td>${platform}</td>
+         <td>${releaseYear}</td>
+         <td>${developer}</td>
+         <td>${rating}</td>
+      `;
+
+      tbody.appendChild(row);
+   })
+})
   .catch(error => {
     console.error('Error fetching or parsing XML:', error);
   });
